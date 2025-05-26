@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web_template</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .hero{
+            background-image: url(./img/rh.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+        .hero{
+           max-width: 1200px;
+            margin: 40px auto;
+            width: auto;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;  
+        }
+           
+        .hero-text{
+            flex: 1;
+            min-width: 300px;
+        }
+        .hero-text h3{
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: rgb(48, 114, 229);
+            font-family: Roboto,sans-serif;
+            padding: 20px;
+        }
+        .hero-text h1{
+            font-size: 60px;
+            color: #fde800;
+            margin-bottom: 20px;
+            width: 50%;
+            padding: 20px;         
+            border: none;
+            border-radius: 5px;
+            cursor: pointer; 
+            font-family: sans-serif;                 
+        }
+         .navber{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(190, 190, 190);
+            padding: 15px 30px;
+            flex-wrap: wrap;
+        }
+        .logo{
+           font-size: 22px;
+            font-weight: bold;
+            color: rgb(194, 15, 15); 
+            font-family: sans-serif; 
+        }
+        .hero-text h2{
+            font-size: 25px;
+            color: white;
+            width: 50%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            line-height:0;
+            padding: 20px;
+            
+        }
+        .hero-text i{
+            font-size: 4rem;
+            margin-left: 20px;
+            color: white;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .navber i{
+            font-size: 2rem;
+        }
+
+        /* our services */
+        .our-services{
+            max-width: 1200px;
+            margin: 60px auto;
+            width: auto;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+            text-align: center;
+            background-color: rgb(195, 195, 195);
+        }
+        .our-services-text{
+            flex: 1;
+            min-width: 300px;
+            margin: 20px;
+        }
+        .our-services-text h4{
+            font-size: 20px;
+            font-family: sans-serif;
+            color: rgb(103, 102, 102);
+            line-height: 2.5;
+        }
+        .our-services-text h1{
+            font-size: 50px;
+            font-family: sans-serif;
+            line-height: 3.5;
+        }
+        .our-services-text p{
+            font-family: sans-serif;
+            color: rgb(107, 107, 107);
+        }
+        .our-services-text button{
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            background-color: rgb(237, 2, 2);
+            color: white;
+            border: none;
+        }
+        .our-services-text button:hover{
+            background-color: rgb(180, 0, 0);
+        }
+
+        /* help */
+        .call{
+            max-width: 1200px;
+            margin: 60px auto;
+            width: auto;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+            text-align: center;
+            display: flex;
+            
+        }
+        .call-text{
+            flex: 1;
+            min-width: 300px;
+            margin: 20px;
+        }
+        .call-logo{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            min-width: 300px;
+            position: absolute;
+            left: 15%;
+            bottom: -120%;
+        }
+        .call-text{
+            flex: 1;
+            min-width: 300px;
+            margin: 20px;
+        }
+        .call-text h2{
+            font-family: sans-serif;
+            font-size: 30px;
+            line-height: 3.1;
+            left: 30%;
+        }
+        .call-text h3{
+            font-family: sans-serif;
+            font-size: 20;
+            color: firebrick;
+        }
+        .call-img{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            min-width: 300px;
+            position: absolute;
+            right: 5%;
+            top: 140;       
+        }
+        .call-pra p{
+            font-family: sans-serif;
+            padding: 10px;
+            color: blue;
+        }
+        /* book */
+        .book{
+            max-width: 1200px;
+            margin: 60px auto;
+            width: auto;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .book{
+            background-image: url(./img/cover.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+        .book-text{
+            flex: 1;
+            min-width: 300px;
+            margin: 20px;
+        }
+        .book-text h1{
+            font-family: sans-serif;
+            font-size: 40px;
+            color: rgb(139, 0, 0);
+            margin-left: 50%;
+            padding: 20px;
+        }
+        .book-text p{
+            font-family: sans-serif;
+            font-size: 20px;
+            color: white;
+            margin-left: 50%;
+            
+        }
+        .book-text button{
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            background-color: rgb(237, 2, 2);
+            color: white;
+            border: none;
+            margin-left: 50%;
+        }
+        .book-text button:hover{
+            background-color: rgb(185, 1, 1);
+        }
+        /* services */
+        .ser{
+            max-width: 1200px;
+            margin: 60px auto;
+            width: auto;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+            text-align: center;
+            background-color: darkgray;
+        }
+        
+        .ser-text{
+            font-family: sans-serif;
+            font-size: 25px;
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+            margin: 40px;
+            margin-bottom: 30%;       
+        }
+       
+        .ser-icon p{
+            font-family: sans-serif;
+            font-size: 20px;
+            color: rgb(255, 55, 0);
+        }
+        
+    
+        /* end */
+        .end{
+            max-width: 1200px;
+            margin: 60px auto;
+            width: auto;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+            text-align: center;
+            background-color: rgb(234, 168, 207); 
+        }
+        .end-txt{
+            font-family: sans-serif;
+            font-size: 25px;
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+            margin: 40px;
+            margin-bottom: 30%;
+        }
+        .end-txt h1{
+            font-size: 40px;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        .end-txt h3{
+            font-family: sans-serif;
+            font-size: 20px;
+            color: blue;
+            padding: 20px;
+        }
+        .end-txt button{
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 15px;
+        }
+         .btn-primary {
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #b00202;
+        }
+         .btn-secondary {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #ffea00;
+        }
+
+        .btn-secondary:hover {
+            background-color: #00e5ff;
+            color: #000;
+        }
+
+        /* Get In Touch */
+        .touch{
+            max-width: 1200px;
+            margin: 60px auto;
+            width: auto;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+            text-align: center;
+            background-color: rgb(227, 227, 227); 
+        }
+        .touch-text{
+            font-family: sans-serif;
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+        }
+        .touch-text h1{
+            text-align: center;
+            font-size: 40px;
+            padding: 30px;      
+        }
+        .touch-text h3{
+            color: blue;
+        }
+        .touch-text i{
+            padding: 10px;
+            color: #16a400;
+        }
+        .touch-form{
+            width:300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid rgb(218, 218, 212);
+            border-radius: 10px;
+            background-color: rgb(246, 246, 240);
+            box-shadow:0 0 10px rgb(72, 71, 71);
+            
+        }
+        .touch-form button{
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(87, 42, 237);
+            color: aliceblue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        .touch-form button:hover{
+            background-color: rgb(0, 0, 181);
+        }
+        .touch-form input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgb(132, 130, 130);
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+        /* ex */
+        .ex{
+            max-width: 1200px;
+            margin: 60px auto;
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+            text-align: center;
+            background-color: rgb(132, 132, 132);   
+        }
+        .ex-text{
+            font-family: sans-serif;
+            font-size: 15px;
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+            margin: 40px;
+            margin-bottom: 30%;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navber">
+        <div class="logo"> <i class="fa-solid fa-house"></i> RH</div>
+        <i class="fa-solid fa-bars"></i>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h3>RATUL HASAN</h3>
+            <h1>WEB DESIGNER</h1>
+            <h2>_____________________________________</h2> <br>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css"></i>
+        </div>
+    </section> 
+
+    <!-- our services -->
+     <section class="our-services">
+        <div class="our-services-text">
+            <h4>our services</h4>
+            <h1>How Can We Help You?</h1>
+            <p>We specialize in making routine maintenance and emergency repair experiences worry free. Give us a call today to learn how simple our process truly is!</p>
+            <button>BOOK NOW</button>
+        </div>
+     </section>
+
+     <!-- help -->
+     <section class="call">
+        <div class="call-logo"> <img src="./img/emon.jpg" alt=""></div>
+
+        <div class="call-text">
+            <h2>Need Help Right Away? </h2>
+            <h3>Call us now: 01977861766 </h3>
+        </div>
+        <div class="call-img"> <img src="./img/emon.jpg" alt=""></div>
+        <div class="call-pra">
+            <p>By planning ahead you can save yourself from feeling stressed and overwhelmed. Our Repair Services is the handyman service provider trusted throughout Pennsylvania. </p>
+        </div>
+     </section>
+
+     <!-- book -->
+      <section class="book">
+        <div class="book-text">
+            <h1>Best Quality <br>
+                ____________
+            </h1>
+            <p>Company works with homeowners, contractors, realtors, and residential building managers to help maintain, upgrade, and repair properties </p>
+            <button>BOOK NOW</button>
+        </div>
+      </section>
+
+      <!-- services -->
+       <section class="ser">
+        <div class="ser-text">
+            <h2>Our Services</h2> <br>
+            <div class="ser-icon">
+                <i class="fa-solid fa-display"></i>
+                <h4>WEB DESIGN</h4>
+                <p>Web design encompasses the design of websites, focusing on the user experience (UX) and interface (UI) rather than the technical aspects of software development.</p>
+            </div>
+            <br>
+            <div class="ser-icon">
+                <i class="fa-brands fa-discord"></i>
+                <h4>WEB DEVELOPMENT</h4>
+                <p>Web development involves creating, building, and maintaining websites and web applications that run on a browser.</p>
+            </div>
+        </div>
+       </section>
+
+       <!-- end -->
+       <section class="end">
+        <div class="end-txt">
+            <h1>Get your 'TO DO' list completed by a real professional!</h1>
+            <h3>We re on a mission to help build long-lasting brands that shape and define an entire industry through thoughtful design.</h3>
+            <button class="btn-primary">BOOK NOW</button>
+            <button class="btn-secondary">CALL US</button>
+        </div>
+       </section>
+
+       <!-- Get In Touch -->
+        <section class="touch">
+            <div class="touch-text">
+                <h1>Get In Touch</h1>
+                <h3>Contact Information</h3> <br>
+                <i class="fa-regular fa-envelope">  ratule50@gmail.com</i> <br>
+                <i class="fa-solid fa-phone">  01977861766</i> <br>
+                <i class="fa-solid fa-location-dot">  mujibnagar,meherpur</i> <br>
+                <i class="fa-brands fa-linkedin">  ratul_hasan_emon</i>
+            </div>
+            <div class="touch-form">
+               
+                <label for=""></label>
+                <input type="text" placeholder=" Your Name"> <br>
+
+                <label for=""></label>
+                <input type="email" placeholder="Your Email"> <br>
+
+                <label for=""></label>
+                <input type="text" placeholder="Subject"> <br>
+
+                <label for=""></label>
+                <input type="text, number, email" placeholder="Your Message"> <br>
+
+                <button class="submit">Send Message</button>
+    
+            </div>
+        </section>
+        <section class="ex">
+            <div class="ex-text">
+                <h5>Sample text. Click to select the text box. Click again or double click to start editing the text.</h5>
+            </div>
+        </section>
+
+
+
+</body>
+</html>
